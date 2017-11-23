@@ -60,17 +60,17 @@ module.exports = {
     },
   },
   "filters": {
-   ".eslintrc.js": "lint==='standard'",
-    ".eslintignore": "lint==='standard'",
+   ".eslintrc.js": "lint",
+    ".eslintignore": "lint",
     "config/test.env.js": "unit",
     "build/webpack.test.conf.js": "unit === 'karma'",
     "test/unit/**/*": "unit",
-    "test/unit/index.js": "unit === 'karma'",
+    "test/unit/index.js": "unit",
     "test/unit/jest.conf.js": "unit === 'jest'",
-    "test/unit/karma.conf.js": "unit === 'karma'",
-    "test/unit/specs/index.js": "unit === 'karma'",
+    "test/unit/karma.conf.js": "unit",
+    "test/unit/specs/index.js": "unit",
     "test/unit/setup.js": "unit === 'jest'",
-    "test/e2e/**/*": "e2e==='nightwatch'",
+    "test/e2e/**/*": "e2e",
     "src/router/**/*": "router"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
