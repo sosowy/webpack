@@ -58,6 +58,7 @@ module.exports = {
       "default": "nightwatch",
       "value": "nightwatch"
     },
+  },
   "filters": {
    ".eslintrc.js": "lint==='standard'",
     ".eslintignore": "lint==='standard'",
