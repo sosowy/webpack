@@ -45,8 +45,6 @@ module.exports = {
       "message": "Install vue-router?"
     },
     "lintConfig": {
-      "when": "lint",
-      "type": "list",
       "message": "Pick an ESLint preset",
       "choices": [
         {
@@ -57,8 +55,6 @@ module.exports = {
       ]
     },
     "runner": {
-      "when": "unit",
-      "type": "list",
       "message": "Pick a test runner",
       "choices": [
         {
