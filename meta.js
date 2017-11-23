@@ -44,10 +44,6 @@ module.exports = {
       "type": "confirm",
       "message": "Install vue-router?"
     },
-    "lint": {
-      "type": "confirm",
-      "message": "Use ESLint to lint your code?"
-    },
     "lintConfig": {
       "when": "lint",
       "type": "list",
@@ -57,22 +53,8 @@ module.exports = {
           "name": "Standard (https://github.com/standard/standard)",
           "value": "standard",
           "short": "Standard"
-        },
-        {
-          "name": "Airbnb (https://github.com/airbnb/javascript)",
-          "value": "airbnb",
-          "short": "Airbnb"
-        },
-        {
-          "name": "none (configure it yourself)",
-          "value": "none",
-          "short": "none"
         }
       ]
-    },
-    "unit": {
-      "type": "confirm",
-      "message": "Setup unit tests"
     },
     "runner": {
       "when": "unit",
@@ -80,25 +62,11 @@ module.exports = {
       "message": "Pick a test runner",
       "choices": [
         {
-          "name": "Jest",
-          "value": "jest",
-          "short": "jest"
-        },
-        {
           "name": "Karma and Mocha",
           "value": "karma",
           "short": "karma"
-        },
-        {
-          "name": "none (configure it yourself)",
-          "value": "noTest",
-          "short": "noTest"
         }
       ]
-    },
-    "e2e": {
-      "type": "confirm",
-      "message": "Setup e2e tests with Nightwatch?"
     }
   },
   "filters": {
