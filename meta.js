@@ -41,19 +41,19 @@ module.exports = {
       "message": "Install vue-router?"
     },
     "lint": {
-      "type": "confirm",
+      "type": "string",
       "required": true,
       "default": "ESLint",
       "value": "standard"
     },
     "unit": {
-      "type": "confirm",
+      "type": "string",
       "required": true,
       "default": "Karma",
       "value": "karma"
     },
      "e2e": {
-      "type": "confirm",
+      "type": "string",
       "required": true,
       "default": "nightwatch",
       "value": "nightwatch"
