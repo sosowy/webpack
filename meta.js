@@ -36,7 +36,6 @@ module.exports = {
         }
       ]
     },
-    
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
@@ -44,50 +43,33 @@ module.exports = {
     "lint": {
       "type": "confirm",
       "required": true,
-      "message": "Use ESLint to lint your code"
-    },
-    "lintConfig": {
-      "when": "lint",
-      "message": "Pick an ESLint preset",
-      "required": true,
-      "choices": [
-        {
-          "name": "Standard (https://github.com/standard/standard)",
-          "value": "standard",
-          "short": "Standard"
-        }
-      ]
+      "default": "ESLint",
+      "value": "standard"
     },
     "unit": {
       "type": "confirm",
       "required": true,
-      "message": "Setup unit tests"
+      "default": "Karma",
+      "value": "karma"
     },
-    "runner": {
-      "when": "unit",
-      "message": "Pick a test runner",
+     "e2e": {
+      "type": "confirm",
       "required": true,
-      "choices": [
-        {
-          "name": "Karma and Mocha",
-          "value": "karma",
-          "short": "karma"
-        }
-      ]
-    }
-  },
+      "default": "nightwatch",
+      "value": "nightwatch"
+    },
   "filters": {
-   ".eslintrc.js": "lint",
-    ".eslintignore": "lint",
+   ".eslintrc.js": "lint==='standard'",
+    ".eslintignore": "lint==='standard'",
     "config/test.env.js": "unit",
-    "build/webpack.test.conf.js": "unit && runner === 'karma'",
+    "build/webpack.test.conf.js": "unit === 'karma'",
     "test/unit/**/*": "unit",
-    "test/unit/index.js": "unit && runner === 'karma'",
-    "test/unit/jest.conf.js": "unit && runner === 'jest'",
-    "test/unit/karma.conf.js": "unit && runner === 'karma'",
-    "test/unit/specs/index.js": "unit && runner === 'karma'",
-    "test/unit/setup.js": "unit && runner === 'jest'",
-    "test/e2e/**/*": "e2e",
+    "test/unit/index.js": "unit === 'karma'",
+    "test/unit/jest.conf.js": "unit === 'jest'",
+    "test/unit/karma.conf.js": "unit === 'karma'",
+    "test/unit/specs/index.js": "unit === 'karma'",
+    "test/unit/setup.js": "unit === 'jest'",
+    "test/e2e/**/*": "e2e==='nightwatch'",
     "src/router/**/*": "router"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
