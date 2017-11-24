@@ -45,7 +45,6 @@ module.exports = {
    ".eslintrc.js": "lint",
     ".eslintignore": "lint",
     "config/test.env.js": "unit",
-    "build/webpack.test.conf.js": "unit === 'karma'",
     "test/unit/**/*": "unit",
     "test/unit/index.js": "unit",
     "test/unit/jest.conf.js": "unit === 'jest'",
