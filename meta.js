@@ -24,18 +24,6 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
-    "build": {
-      "type": "list",
-      "required": true,
-      "message": "Vue build",
-      "choices": [
-        {
-          "name": "Runtime + Compiler: recommended for most users",
-          "value": "standalone",
-          "short": "standalone"
-        }
-      ]
-    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
@@ -49,15 +37,9 @@ module.exports = {
     "unit": {
       "type": "string",
       "required": true,
-      "default": "Karma",
+      "default": "Karma+Mocha",
       "value": "karma"
-    },
-     "e2e": {
-      "type": "string",
-      "required": true,
-      "default": "nightwatch",
-      "value": "nightwatch"
-    },
+    }
   },
   "filters": {
    ".eslintrc.js": "lint",
@@ -70,7 +52,6 @@ module.exports = {
     "test/unit/karma.conf.js": "unit",
     "test/unit/specs/index.js": "unit",
     "test/unit/setup.js": "unit === 'jest'",
-    "test/e2e/**/*": "e2e",
     "src/router/**/*": "router"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
